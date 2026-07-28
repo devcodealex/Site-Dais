@@ -289,27 +289,104 @@ body {
     background: rgba(255,255,255,0.1);
 }
 
-/* --- SLIDER DE FOTOS HERO --- */
-.slider-container {
+/* --- SLIDER DE FOTOS SUAVE --- */
+/* --- SLIDER DE FOTOS - TRANSIÇÃO SUAVE CONTINUA --- */
+.hero-image-container {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 500px; /* Garante que o contêiner não encolha na troca */
+    width: 100%;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    height: 520px; /* Mantém a altura estável para não pular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .slide-img {
     position: absolute;
     top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: auto;
+    max-width: 480px;
+    
+    /* Efeito de opacidade com aceleração de hardware */
     opacity: 0;
     visibility: hidden;
-    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+    will-change: opacity, filter;
+    transition: opacity 1.8s ease-in-out, visibility 1.8s ease-in-out, filter 1.8s ease-in-out;
+    
+    filter: drop-shadow(0px 0px 15px rgba(216, 164, 161, 0.3));
 }
 
 .slide-img.active {
-    position: relative;
     opacity: 1;
     visibility: visible;
+    filter: drop-shadow(0px 0px 25px rgba(216, 164, 161, 0.75));
+}
+
+/* Indicadores */
+.slider-dots {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot-item {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.dot-item.active,
+.dot-item:hover {
+    background-color: var(--accent-gold);
+    width: 26px;
+    border-radius: 12px;
+}
+}
+
+/* Indicadores (Pontinhos) abaixo das fotos */
+.slider-dots {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot-item {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.dot-item.active,
+.dot-item:hover {
+    background-color: var(--accent-gold);
+    width: 26px;
+    border-radius: 12px;
+}
 }
 
 /* Indicadores (Pontinhos) abaixo das fotos */

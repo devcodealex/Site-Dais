@@ -44,6 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 	
 	// --- LÓGICA DO SLIDER DE FOTOS ---
+// --- SLIDER DE FOTOS AUTOMÁTICO ---
+// --- LÓGICA DO SLIDER DE FOTOS ---
 let currentSlideIndex = 0;
 const slides = document.querySelectorAll('.slide-img');
 const dots = document.querySelectorAll('.dot-item');
@@ -52,33 +54,36 @@ let slideInterval;
 function showSlide(index) {
     if (slides.length === 0) return;
 
-    // Se passar do número de fotos, volta para a primeira
     if (index >= slides.length) currentSlideIndex = 0;
     else if (index < 0) currentSlideIndex = slides.length - 1;
     else currentSlideIndex = index;
 
-    // Remove a classe ativa de todas
-    slides.forEach(slide => slide.classList.remove('active'));
-    dots.forEach(dot => dot.classList.remove('active'));
+    slides.forEach((slide, i) => {
+        if (i === currentSlideIndex) {
+            slide.classList.add('active');
+        } else {
+            slide.classList.remove('active');
+        }
+    });
 
-    // Ativa apenas a foto e o pontinho atual
-    slides[currentSlideIndex].classList.add('active');
-    if (dots[currentSlideIndex]) {
-        dots[currentSlideIndex].classList.add('active');
-    }
+    dots.forEach((dot, i) => {
+        if (i === currentSlideIndex) {
+            dot.classList.add('active');
+        } else {
+            dot.classList.remove('active');
+        }
+    });
 }
 
-// Troca para o slide clicado nos pontinhos
 function currentSlide(index) {
     showSlide(index);
-    resetTimer(); // Reinicia o tempo para não trocar rápido demais após o clique
+    resetTimer();
 }
 
-// Troca automática a cada 4 segundos (4000ms)
 function startSlideTimer() {
     slideInterval = setInterval(() => {
         showSlide(currentSlideIndex + 1);
-    }, 4000);
+    }, 5000); // Troca a cada 5 segundos para apreciar o efeito lento de 1.8s
 }
 
 function resetTimer() {
@@ -86,7 +91,6 @@ function resetTimer() {
     startSlideTimer();
 }
 
-// Inicia o carrossel ao carregar a página
 if (slides.length > 0) {
     startSlideTimer();
 }
