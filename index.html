@@ -1,4 +1,50 @@
-<!-- Hero Section -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profª Dais Cardoso | Neurociência, Psicomotricidade & Nutrição</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Font Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS CSS (Animações de Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/559192910488" target="_blank" class="whatsapp-float" aria-label="Contato via WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Header / Navbar -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">Profª Dais Cardoso<span class="dot">.</span></a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir Menu">
+                <i class="fa-solid fa-bars-staggered"></i>
+            </button>
+            <nav class="nav-menu" id="nav-menu">
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Quem Sou Eu</a></li>
+                    <li><a href="#trajetoria">Trajetória</a></li>
+                    <li><a href="#pilares">Pilares</a></li>
+                    <li><a href="#contato" class="btn-nav">Agendar Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+   <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="hero-bg-glow"></div>
         <div class="container hero-container">
@@ -43,3 +89,187 @@
             </div>
         </div>
     </section>
+
+        <!-- Indicadores (Pontinhos na parte inferior da foto) -->
+        <div class="slider-dots">
+            <span class="dot-item active" onclick="currentSlide(0)"></span>
+            <span class="dot-item" onclick="currentSlide(1)"></span>
+            <span class="dot-item" onclick="currentSlide(2)"></span>
+        </div>
+    </div>
+</div>
+		
+    </section>
+
+    <!-- Quem Sou Eu & Apresentação -->
+    <section id="sobre" class="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="subtitle">Propósito e Essência</span>
+                <h2>Quem Sou Eu?</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-box"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3>Movida pela Fé & Família</h3>
+                    <p>Cristã dedicada, encontro na minha fé e na minha família o alicerce para atuar com empatia, acolhimento e integridade profissional.</p>
+                </div>
+
+                <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h3>Visão Interdisciplinar</h3>
+                    <p>Com formação em Educação Física, pós em Psicomotricidade e base em Nutrição, conecto corpo, mente e cérebro para resultados reais.</p>
+                </div>
+
+                <div class="about-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon-box"><i class="fa-solid fa-feather"></i></div>
+                    <h3>Paixões Pessoais</h3>
+                    <p>Amante da neurociência, dos livros e da leitura contínua. Entusiasta de viagens, momentos em família e do carinho de ter gatos por perto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Linha do Tempo / Trajetória Acadêmica -->
+    <section id="trajetoria" class="timeline-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="subtitle">Formação Contínua</span>
+                <h2>Trajetória Acadêmica & Qualificações</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item left" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <span class="date"><i class="fa-solid fa-graduation-cap"></i> Graduação</span>
+                        <h3>Educação Física</h3>
+                        <p>Desenvolvimento motor, fisiologia do exercício e promoção do bem-estar físico e corporal.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <span class="date"><i class="fa-solid fa-award"></i> Pós-Graduação</span>
+                        <h3>Especialista em Psicomotricidade</h3>
+                        <p>Análise aprofundada da integração das funções motoras e psíquicas no processo de desenvolvimento humano.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <span class="date"><i class="fa-solid fa-stethoscope"></i> Formação Técnica</span>
+                        <h3>Técnica em Nutrição e Dietética</h3>
+                        <p>Domínio do planejamento nutricional, composição dos alimentos e promoção da saúde alimentar.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right" data-aos="fade-left">
+                    <div class="timeline-content highlight">
+                        <span class="date"><i class="fa-solid fa-spinner fa-spin"></i> Em Andamento</span>
+                        <h3>Futura Nutricionista</h3>
+                        <p>Complementação do ciclo de saúde integral, unindo o conhecimento clínico e metabólico ao movimento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilares de Atuação -->
+    <section id="pilares" class="pillars">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="subtitle">Áreas de Especialização</span>
+                <h2>Pilares do Meu Trabalho</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="pillars-grid">
+                <div class="pillar-box" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="pillar-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h3>Neurociência & Aprendizagem</h3>
+                    <p>Estudo da plasticidade cerebral aplicada ao desenvolvimento cognitivo e motor.</p>
+                </div>
+                <div class="pillar-box" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="pillar-icon"><i class="fa-solid fa-child-reaching"></i></div>
+                    <h3>Psicomotricidade</h3>
+                    <p>Trabalho preventivo e terapêutico focado na harmonia entre a mente e o gesto motor.</p>
+                </div>
+                <div class="pillar-box" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="pillar-icon"><i class="fa-solid fa-apple-whole"></i></div>
+                    <h3>Nutrição & Saúde</h3>
+                    <p>Estratégias para otimização metabólica, saúde preventiva e estilo de vida saudável.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato Profissional -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <div class="contact-wrapper" data-aos="fade-up">
+                <div class="contact-info">
+                    <h2>Vamos Conectar Nossos Conhecimentos?</h2>
+                    <p>Entre em contato para agendamentos, palestras, mentorias ou parcerias acadêmicas.</p>
+                    
+                    <div class="contact-details">
+                        <a href="https://instagram.com/profa.daiscar" target="_blank" class="contact-item">
+                            <i class="fa-brands fa-instagram"></i>
+                            <div>
+                                <span>Siga no Instagram</span>
+                                <strong>@profa.daiscar</strong>
+                            </div>
+                        </a>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <span>E-mail Profissional</span>
+                                <strong>contatoprofadais@gmail.com</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulário com Formspree e Ajax JS -->
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/mjgnlpkg" method="POST">
+                    <h3>Envie uma Mensagem</h3>
+                    <div class="input-group">
+                        <input type="text" name="name" id="name" placeholder="Nome Completo" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" name="email" id="email" placeholder="Seu E-mail" required>
+                    </div>
+                    <div class="input-group">
+                        <textarea name="message" id="message" rows="4" placeholder="Como posso te ajudar?" required></textarea>
+                    </div>
+                    <button type="submit" id="submitBtn" class="btn-primary btn-full">
+                        Enviar Mensagem <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                    <!-- Mensagem de resposta sem sair da página -->
+                    <div id="formStatus" style="margin-top: 15px; text-align: center; font-size: 0.95rem; font-weight: 500;"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé Premium -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo">Profª Dais Cardoso<span class="dot">.</span></a>
+                <p>Educação Física • Psicomotricidade • Nutrição • Neurociência</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Profª Dais Cardoso. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts Externos (AOS e Typed.js) -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
